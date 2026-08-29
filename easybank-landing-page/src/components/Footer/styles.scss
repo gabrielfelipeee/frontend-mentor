@@ -1,0 +1,110 @@
+@import '../../styles/variables';
+
+.container-footer {
+    background-color: $primary-text-color;
+
+    .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        color: $white;
+        padding: 3rem 2rem;
+        margin: 0 auto;
+        max-width: 1200px;
+
+        .box-social-mideas {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                margin-bottom: 2rem;
+            }
+
+            a {
+                color: $white;
+                margin-right: 1rem;
+
+                &:last-child {
+                    margin: 0;
+                }
+
+                .icon {
+                    font-size: 30px;
+                    transition: .5s;
+
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+
+            }
+        }
+
+        .box-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            list-style: none;
+
+            li {
+                a {
+                    font-weight: 300;
+                    font-size: 1rem;
+                    color: $white;
+                    text-decoration: none;
+                    transition: .5s;
+
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+            }
+
+        }
+
+        .box-rights {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+
+            p {
+                font-size: .9rem;
+                font-weight: 300;
+                color: $secondary-text-color;
+            }
+        }
+    }
+
+}
+
+
+@media screen and (min-width: 1000px) {
+    .container-footer {
+        .box {
+            display: grid;
+            grid-template-columns: 1fr 1fr 2fr;
+            margin: auto;
+
+            .box-social-mideas {
+                align-items: start;
+            }
+
+            .box-info {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                align-items: end;
+            }
+
+            .box-rights {
+                align-items: end;
+            }
+
+        }
+    }
+}

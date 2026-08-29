@@ -1,0 +1,33 @@
+@import '../../../styles/variables';
+
+.menu-link {
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: $secondary-text-color;
+    text-decoration: none;
+    position: relative;
+    transition: .5s;
+    &:hover {
+        color: $primary-text-color;
+    }
+}
+
+@media screen and (min-width: 778px) {
+    .menu-link {
+        &::after {
+            position: absolute;
+            content: "";
+            top: 48px;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 0;
+            background-image: linear-gradient(to right, $primary-color, $secondary-color);
+        }
+
+        &.active::after {
+            transition: .8s;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@import '../../styles/variables';
+
+.container-button {
+    font-weight: 700;
+    background-image: linear-gradient(to right, $primary-color, $secondary-color);
+    color: #fff;
+    padding: .8rem 2rem;
+    border-radius: 2rem;
+    transition: .5s;
+    cursor: pointer;
+
+    &:hover {
+        opacity: .7;
+    }
+}
